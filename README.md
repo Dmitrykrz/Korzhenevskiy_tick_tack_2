@@ -27,22 +27,31 @@ Korzhenevskiy_tick_tack_2::mass_tick();
 
 ```void start(); ``` 
 Starts the timer, counts=0
+
 	```void stop();```
  Stops the timer
+ 
 	```void tick();```
  Checks if the time is due, executtes callback functions if needed
+ 
 	```void setinterval(int timer);```
  Sets new interval in ms
+ 
 	```void restart();```
  Restart timer. What it does is basically not letting the timer execute it's function by forcing it to wait again
+ 
 	```void zero_count();```
  Makes the number of executions zero
+ 
 	```static void mass_start();```
  Starts all timers.  This functions calls 	```void start();``` for every timer
+ 
 	```static void mass_tick();```
  Checks all timers. This functions calls 	```void tick();``` for every timer
+ 
 	```static void mass_stop();```
  Checks all timers. This functions calls 	```void stop();``` for every timer
+ 
 	```int counts;```
  Returns the number of executions
  

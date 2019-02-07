@@ -2,13 +2,21 @@
 #include "Korzhenevskiy_tick_tack_2.h"
 
 
-int Korzhenevskiy_tick_tack_2::number_of_objects{};
 
 Korzhenevskiy_tick_tack_2* Korzhenevskiy_tick_tack_2::registry[Korzhenevskiy_tick_tack_2::len]{};
 
 Korzhenevskiy_tick_tack_2::Korzhenevskiy_tick_tack_2(fptr callback, uint32_t timer) {
-	registry[number_of_objects] = (this);
-	number_of_objects++;
+	
+	for (int place_for_new_object = 0; place_for_new_object < len; place_for_new_object++)
+	{
+		
+		if (registry[place_for_new_object] == 0)
+		{
+			registry[place_for_new_object] = (this);
+			
+			break;
+		}
+	}
 
 	_timer = timer;
 	this->callback = callback;
@@ -51,24 +59,35 @@ void Korzhenevskiy_tick_tack_2::tick() {
 
 void Korzhenevskiy_tick_tack_2::mass_start()
 {
-	for (int x = 0; x < number_of_objects; x++)
-		registry[x]->start();
+	for (int x = 0; x < len; x++)
+	{
+		if (registry[x] > 0) registry[x]->start();
+		else break;
+	}
 	
 }
 
 
 void Korzhenevskiy_tick_tack_2::mass_tick()
 {
-	for (int x = 0; x < number_of_objects; x++)
-		registry[x]->tick();
+	
+	for (int x = 0; x < len; x++)
+	{		
+		if (registry[x] > 0) registry[x]->tick(); 
+		else break;
+	}
+
 
 }
 
 
 void Korzhenevskiy_tick_tack_2::mass_stop()
 {
-	for (int x = 0; x < number_of_objects; x++)
-		registry[x]->stop();
+	for (int x = 0; x < len; x++)
+	{
+		if (registry[x] > 0) registry[x]->stop();
+		else break;
+	}
 
 }
 

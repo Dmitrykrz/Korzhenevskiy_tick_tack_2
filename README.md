@@ -25,7 +25,7 @@ Korzhenevskiy_tick_tack_2::mass_tick();
 
 # List of all functions
 
-```void start(); ``` 
+	```void start(); ``` 
 Starts the timer, counts=0
 
 	```void stop();```
@@ -55,6 +55,6 @@ Starts the timer, counts=0
 	```int counts;```
  Returns the number of executions
  
- ```#define max_number_of_timers 10```
+ 	```#define max_number_of_timers 10```
  This parameter in .h file determins the maximum number of timers, default is 10
  

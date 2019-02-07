@@ -8,16 +8,16 @@ There are dozens of ticker/timer libraries out there. All of them lack on thing 
 
 # Usage
 
-### Declare the timer
+### 1 Declare the timer
 ```
 Korzhenevskiy_tick_tack_1 timer1(some_function_1, 1000);
 Korzhenevskiy_tick_tack_2 timer1(some_function_2, 3000);
 ```
-### Start all timers
+### 2 Start all timers
 ```
 Korzhenevskiy_tick_tack_2::mass_start();
 ```
-### Add updater to the loop()
+### 3 Add updater to the loop()
 ```
 Korzhenevskiy_tick_tack_2::mass_tick();
 ```

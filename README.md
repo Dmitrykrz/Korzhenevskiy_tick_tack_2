@@ -24,37 +24,38 @@ Korzhenevskiy_tick_tack_2::mass_tick();
 
 
 # List of all functions
+	
+	void start();
 
-	```void start(); ``` 
 Starts the timer, counts=0
 
-	```void stop();```
+	void stop();
  Stops the timer
  
-	```void tick();```
+	void tick();
  Checks if the time is due, executtes callback functions if needed
  
-	```void setinterval(int timer);```
+	void setinterval(int timer);
  Sets new interval in ms
  
-	```void restart();```
+	void restart();
  Restart timer. What it does is basically not letting the timer execute it's function by forcing it to wait again
  
-	```void zero_count();```
+	void zero_count();
  Makes the number of executions zero
  
-	```static void mass_start();```
- Starts all timers.  This functions calls 	```void start();``` for every timer
+	static void mass_start();
+ Starts all timers.  This functions calls 	void start(); for every timer
  
-	```static void mass_tick();```
- Checks all timers. This functions calls 	```void tick();``` for every timer
+	static void mass_tick();
+ Checks all timers. This functions calls 	void tick(); for every timer
  
-	```static void mass_stop();```
- Checks all timers. This functions calls 	```void stop();``` for every timer
+	static void mass_stop();
+ Checks all timers. This functions calls 	void stop(); for every timer
  
-	```int counts;```
+	int counts;
  Returns the number of executions
  
- 	```#define max_number_of_timers 10```
+ 	#define max_number_of_timers 10
  This parameter in .h file determins the maximum number of timers, default is 10
  

@@ -3,8 +3,7 @@ Arduino library for timers
  
 # Arduino timer library based on millis()
 
-There are dozens of ticker/timer libraries out there. All of them lack on thing that I needed which is the ability to mass stop/start/update timers without the need to add a line for each timer. So I made such a library with the help of Andrey Krikunov.
-
+There are dozens of ticker/timer libraries out there. All of them lack on thing that I needed which is the ability to mass stop/start/update timers without the need to add a line for each timer. 
 
 # Usage
 

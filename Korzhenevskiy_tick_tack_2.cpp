@@ -106,3 +106,7 @@ void Korzhenevskiy_tick_tack_2::restart() {
 void Korzhenevskiy_tick_tack_2::zero_count() {
 		counts = 0;
 }
+
+bool Korzhenevskiy_tick_tack_2::enabled() {
+	return _enabled;
+}

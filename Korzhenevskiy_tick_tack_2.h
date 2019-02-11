@@ -17,6 +17,7 @@ public:
 	Korzhenevskiy_tick_tack_2(fptr callback, uint32_t timer);
 	~Korzhenevskiy_tick_tack_2();
 	void start();
+	void start(uint32_t timer);
 	void stop();
 	void tick();
 	void setinterval(int timer);

@@ -32,7 +32,11 @@ void Korzhenevskiy_tick_tack_2::start() {
 	_lastTime = millis();
 	_enabled = true;
 	}
-
+void Korzhenevskiy_tick_tack_2::start(uint32_t timer) {
+	_lastTime = millis();
+	_enabled = true;
+	_timer = timer;
+}
 
 
 void Korzhenevskiy_tick_tack_2::stop() {
